@@ -32,11 +32,11 @@ export default function App() {
     setBots(sortedBots);// sorts bots
   }
 
-  return (
+  return (//allows users to sort the bots,enlist and delete bots and display collection
     <div className="app-container">
       <h1 className="app-heading">Bot Battlr</h1>
       <div className="app-content">
-        <SortBar handleSort={handleSort} />
+        <SortBar handleSort={handleSort} /> 
         <BotArmy bots={bots.filter((bot) => bot.isEnlisted)} handleDischarge={dischargeBot} handleClick={delistBot} />
         <BotCollection bots={bots} handleDischarge={dischargeBot} handleClick={enlistBot} />
       </div>
