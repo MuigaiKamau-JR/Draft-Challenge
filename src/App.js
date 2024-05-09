@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import BotCollection from './components/BotCollection';
 import BotArmy from './components/BotArmy';
 import SortBar from './components/SortBar';
-import './App.css'; // Import your CSS file for styling
+import './App.css'; //kumbuka css
 
 export default function App() {
   const botsAPI = 'https://bots-taupe.vercel.app/bots';
@@ -26,10 +26,10 @@ export default function App() {
     setBots(bots.filter((bot) => (bot.id === id ? false : true)));
   }
 
-  // Function to sort bots by criteria (health, damage, or armor)
+
   function handleSort(criteria) {
     const sortedBots = [...bots].sort((a, b) => b[criteria] - a[criteria]);
-    setBots(sortedBots);
+    setBots(sortedBots);// sorts bots
   }
 
   return (
@@ -43,3 +43,10 @@ export default function App() {
     </div>
   );
 }
+
+//Deliverables
+//view all bots in bot collection
+//able to add a bot to my army by clicking on it 
+//Release a bot from BotArmy component
+//When a user clicks x it deletes the bot 
+//Choose if i want to enlist bot to my army or just display the specs to that bot
